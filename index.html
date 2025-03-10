@@ -6,9 +6,12 @@
     <title>My Static Website</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Newsreader:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
 </head>
 <body>
     <header class="bg-custom p-4">
@@ -35,19 +38,46 @@
     <section class="banner-section"></section>
     
     <section class="hero-section">
-        <h1 class="hero-text">We Deliver</h1>
+        <h1 class="hero-text">We are a powerhouse corporate law firm<br>that advises investors<br>and companies—from seed to<br>buyout—across all sectors</h1>
     </section>
     
     <section class="container content-section">
-        <div class="left-column"></div>
+        <div class="left-column">
+            <span>Expertise</span>
+        </div>
         <div class="right-column">
-            <div class="text-section">Text 1</div>
-            <div class="text-section">Text 2</div>
-            <div class="text-section">Text 3</div>
-            <div class="text-section">Text 4</div>
+            <div class="text-section">Fund Raise Transactions</div>
+            <div class="text-section">Mergers and Acquisitions</div>
+            <div class="text-section">General Corporate</div>
+            <div class="text-section">Social Imapct</div>
         </div>
     </section>
+
+    <div id="carouselExample" class="carousel slide carousel-container mt-4" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="carousel2.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="carousel1.jpg" class="d-block w-100" alt="...">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        </button>
+    </div>
     
+
+    <div class="marquee-container">
+        <div class="marquee-content">
+            <img src="carousel2.jpg" alt="Image 1">
+            <img src="carousel1.jpg" alt="Image 2">
+        </div>
+    </div>
+
     <footer class="custom-footer text-white text-center py-3">
         <div class="container">
             <div class="row">

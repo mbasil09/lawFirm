@@ -1,10 +1,14 @@
 .bg-custom {
     background-color: #F2EDE4;
-    height: 14vh;
+    height: 18vh;
 }
 
 .navbar-brand img {
     max-height: 80px;
+}
+
+body {
+    background-color: #F2EDE4;
 }
 
 .navbar-nav .nav-link {
@@ -19,7 +23,7 @@
 
 .navbar-nav .nav-link:hover {
     color: #9b9b9b; /* Change this to your preferred color */
-    transition: color 0.2s ease-in-out;
+    transition: color 0.6s ease-in-out;
 }
 
 .logo-img {
@@ -31,6 +35,14 @@
     background-color: #AABBCC;
     margin: 0;
     padding: 0;
+    font-size: 20px;
+}
+
+.custom-footer h5 {
+    background-color: #AABBCC;
+    margin: 0;
+    padding: 0;
+    font-size: 30px;
 }
 
 .custom-footer p {
@@ -64,71 +76,177 @@
             width: 100%;
             height: 250px;
             background: #F2EDE4 url('banner-image.png') no-repeat center center/contain;
-        }
-        .hero-section {
-            position: relative;
-            width: 100%;
-            height: 500px;
-            background: url('hero-image.webp') no-repeat center center/cover;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .hero-text {
-            font-size: 2rem;
-            color: white;
-            font-weight: bold;
-            opacity: 0;
-            animation: fadeIn 2s ease-in forwards;
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-        .content-section {
-            display: flex;
-            flex-wrap: wrap;
-            align-items: stretch;
-            margin-top: 20px;
-            padding: 0;
-            margin: 0;
-        }
-       .left-column {
-            flex: 1;
-            background: url('content-image.webp') no-repeat center center/cover;
-            background-size: cover;
-            min-height: 400px;
-            width: 100%;
-            height: 100%;
-            padding: 0;
-            margin: 0;
-        }
-        .right-column {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            padding: 20px;
-        }
-        .text-section {
-            padding: 15px;
-            border-bottom: 1px solid #ccc;
-        }
-        .text-section:last-child {
-            border-bottom: none;
-        }
-        @media (max-width: 768px) {
-            .content-section {
-                flex-direction: column;
-                position: relative;
-            }
-            .right-column {
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                background: rgba(255, 255, 255, 0.0);
-                color: white;
-                padding: 20px;
-            }
-        }
+}
+.hero-section {
+    position: relative;
+    width: 100%;
+    height: 700px;
+    background: url('hero-image.webp') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.hero-dna-section{
+    position: relative;
+    width: 100%;
+    height: 800px;
+    background: url('dna-bg.webp') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;   
+}
+.hero-text {
+    font-size: 2rem;
+    color: white;
+    font-family: 'Newsreader', serif;
+    font-size: 40px;
+    padding: 20px;
+    justify-content: center;
+    opacity: 0;
+    animation: fadeIn 2s ease-in forwards;
+}
+.hero-dna-text {
+    font-size: 2rem;
+    color: white;
+    font-family: 'Newsreader', serif;
+    font-size: 70px;
+    padding: 20px;
+    justify-content: center;
+    opacity: 0;
+    animation: fadeIn 1s ease-in forwards;
+}
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+.content-section {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    margin-top: 20px;
+    padding: 0;
+    margin: 0;
+}
+.left-column {
+    flex: 2;
+    background: url('content-image.webp') no-repeat center center/cover;
+    background-size: cover;
+    min-height: 800px;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+}
+.right-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    color: #6f482c;
+    font-family: Georgia;
+    font-style: normal;
+    text-align: left;
+    font-size: 30px;
+    font-weight: 400;
+    justify-content: space-between;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    padding-left: 100px;
+}
+.text-section {
+    padding: 50px;
+    border-bottom: 2px solid #ccc;
+}
+.text-section:last-child {
+    border-bottom: none;
+}
+@media (max-width: 768px) {
+    .content-section {
+        flex-direction: column;
+        position: relative;
+    }
+    .right-column {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: rgba(255, 255, 255, 0.0);
+        color: white;
+        padding: 20px;
+    }
+    .left-column span{
+        display: none;
+    }
+}
+
+.carousel-container {
+    width: 60%;
+    margin: auto;
+    overflow: hidden;
+}
+.carousel-inner img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+.carousel-control-prev, .carousel-control-next {
+    width: 10%;
+}
+
+.marquee-container {
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+    background: #F2EDE4;
+    padding: 20px 0;
+}
+.marquee-content {
+    display: inline-block;
+    white-space: nowrap;
+    animation: marquee 10s linear infinite;
+}
+.marquee-content img {
+    width: 150px;
+    height: auto;
+    margin: 0 20px;
+}
+@keyframes marquee {
+    from { transform: translateX(100%); }
+    to { transform: translateX(-100%); }
+}
+
+
+.image-container {
+    height: 100%;
+    display: flex;
+}
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.alt-header-left{
+    padding: 60px;
+    font-size: 40px;
+    color: #6f482c;
+    font-family: Georgia;
+}
+
+.alt-header-right{
+    padding: 60px;
+}
+
+.img-text-section {
+    font-size: 35px;
+    font-weight: 10;
+    font-family: 'Newsreader', serif;
+    padding: 60px;
+    text-align: center;
+}
