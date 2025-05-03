@@ -3,38 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Static Website</title>
+    <title>M R Singh Sisodia Law Offices</title>
+    <link rel="icon" type="image/png" href="nav-logo.png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Newsreader:wght@300;400;700&display=swap" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"></script>
+    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
-    <header class="bg-custom p-4">
-        <nav class="navbar navbar-expand-lg navbar-light">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#">
-                    <img src="logo.png" alt="Logo" class="logo-img">
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                    <ul class="navbar-nav">
-                        <li class="nav-item"><a class="nav-link" href="./index.html">HOME</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">OUR DNA</a></li>
-                        <li class="nav-item"><a class="nav-link" href="./work.html">WORK</a></li>
-                        <li class="nav-item"><a class="nav-link" href="mailto:email@example.com">CONTACT US</a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
-    
-    <section class="hero-dna-section">
-        <h1 class="hero-dna-text">We close deals.</h1>
+    <div id="header-include"></div>
+    <div id="disclaimer-include"></div>
+    <section class="hero-section" style="background: url('dna-bg.webp') no-repeat center center/cover;">
+        <h1 class="hero-text">Where Others See Complexity, We See a Path to Resolution – Crafted Over Decades.</h1>
     </section>
     <section class="container-fluid text-center">
         <div class="row align-items-center">
@@ -48,65 +30,54 @@
         <div class="row align-items-center">
             <div class="col-md-6 p-0 image-container">
                 <img src="dna-bg.webp" alt="Image 1">
+                <div class="image-overlay">Where Your Priorities Define Ours</div>
             </div>
             <div class="col-md-6 img-text-section">
-                <p>We get deals done. <br>We champion fairness while fiercely safeguarding our clients' interests.</p>
+                <p>We listen first, act relentlessly. Every strategy is tailored to your goals, driven by transparency and unwavering dedication—your success is the legacy we build together.</p>
             </div>
         </div>
         <div class="row align-items-center flex-row-reverse">
             <div class="col-md-6 p-0 image-container">
                 <img src="dna-bg.webp" alt="Image 2">
+                <div class="image-overlay">Decades of Insight, Precision in Action</div>
             </div>
             <div class="col-md-6 img-text-section">
-                <p> We navigate regulatory hurdles and deliver results with bold clarity.</p>
+                <p>Pan-India expertise, we dissect complexities and architect bulletproof strategies, transforming legal challenges into landmark victories.</p>
             </div>
         </div>
         <div class="row align-items-center">
             <div class="col-md-6 p-0 image-container">
                 <img src="dna-bg.webp" alt="Image 3">
+                <div class="image-overlay">Justice Rooted in Integrity</div>
             </div>
             <div class="col-md-6 img-text-section">
-                <p>At our core, we embrace simplicity using plain English to cut through legal fog.</p>
+                <p>We champion fairness with uncompromising ethics, fighting not just for your cause but for systemic change—empowering communities and redefining service to society.</p>
             </div>
         </div>
-        <div class="row align-items-center flex-row-reverse">
-            <div class="col-md-6 p-0 image-container">
-                <img src="dna-bg.webp" alt="Image 4">
-            </div>
-            <div class="col-md-6 img-text-section">
-                <p>Text content for section 4</p>
-            </div>
+        
         </div>
     </section>
     
-    <footer class="custom-footer text-white text-center py-3">
-        <div class="container">
-            <div class="row">
-                <div class="col-12 col-md-6 text-start footer-sec">
-                    <h5>EXPLORE</h5>
-                    <ul class="list-unstyled">
-                        <li><a href="#" class="text-white">OUR DNA</a></li>
-                        <li><a href="#" class="text-white">Work</a></li>
-                    </ul>
-                </div>
-                <div class="col-12 col-md-6 text-start align-self-start footer-sec">
-                    <h5>Connect</h5>
-                    <div class="d-flex gap-3">
-                        <a href="#" class="text-white"><i class="bi bi-linkedin"></i></a>
-                        <a href="mailto:email@example.com" class="text-white"><i class="bi bi-envelope"></i></a>
-                        <a href="tel:+123456789" class="text-white"><i class="bi bi-telephone"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="row mt-3 d-flex justify-content-center w-100">
-                <div class="col-12 text-center">
-                    <p>123 Business Street, City, Country</p>
-                </div>
-            </div>
-        </div>
-    </footer>
-    
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"></script>
+    <div id="footer-include"></div>
     <script src="script.js"></script>
+    <script>
+    function loadInclude(id, file, callback) {
+        fetch(file).then(r => r.text()).then(html => {
+            document.getElementById(id).innerHTML = html;
+            if (callback) callback();
+        });
+    }
+    loadInclude('header-include', 'header.html');
+    loadInclude('footer-include', 'footer.html');
+    loadInclude('disclaimer-include', 'disclaimer.html', checkDisclaimer);
+
+    function checkDisclaimer() {
+        const disclaimerAccepted = localStorage.getItem('disclaimerAccepted');
+        if (disclaimerAccepted === 'true') {
+            const overlay = document.getElementById('disclaimerOverlay');
+            if (overlay) overlay.classList.add('hidden');
+        }
+    }
+    </script>
 </body>
 </html>

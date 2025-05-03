@@ -1,6 +1,7 @@
 .bg-custom {
     background-color: #F2EDE4;
-    height: 15vh;
+    min-height: 60px;
+    height: auto;
 }
 
 .navbar-brand img {
@@ -84,37 +85,19 @@ body {
     position: relative;
     width: 100%;
     height: 700px;
-    background: url('hero-image.webp') no-repeat center center/cover;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.hero-dna-section{
-    position: relative;
-    width: 100%;
-    height: 800px;
-    background: url('dna-bg.webp') no-repeat center center/cover;
-    display: flex;
-    align-items: center;
-    justify-content: center;   
-}
+
 .hero-text {
     font-size: 2rem;
     color: white;
     font-family: 'Newsreader', serif;
-    font-size: 40px;
-    padding: 20px;
-    justify-content: center;
-    opacity: 0;
-    animation: fadeIn 2s ease-in forwards;
-}
-.hero-dna-text {
-    font-size: 2rem;
-    color: white;
-    font-family: 'Newsreader', serif;
     font-size: 70px;
-    padding: 20px;
+    padding: 100px;
     justify-content: center;
+    text-align: center;
     opacity: 0;
     animation: fadeIn 1s ease-in forwards;
 }
@@ -186,6 +169,88 @@ body {
     .left-column span{
         display: none;
     }
+    .bg-custom {
+        padding: 10px !important;
+        min-height: 40px;
+    }
+    .navbar-brand img.logo-img {
+        width: 120px;
+        max-height: 60px;
+    }
+    .navbar-nav .nav-link {
+        font-size: 1rem;
+        margin-right: 0;
+        text-align: left;
+        padding-left: 10px;
+    }
+    .navbar-toggler {
+        z-index: 1051;
+    }
+    .hero-text {
+        font-size: 1.1rem;
+        padding: 18px 8px;
+        max-width: 100vw;
+        max-height: 35vh;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 7;
+        -webkit-box-orient: vertical;
+        text-overflow: ellipsis;
+        white-space: normal;
+    }
+    .hero-dna-text {
+        font-size: 1.1rem;
+        padding: 18px 8px;
+        max-width: 100vw;
+        max-height: 35vh;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 7;
+        -webkit-box-orient: vertical;
+        text-overflow: ellipsis;
+        white-space: normal;
+    }
+    .alt-header-left,
+    .alt-header-right {
+        padding: 12px 4px;
+        font-size: 1rem;
+        text-align: center;
+    }
+    .img-text-section,
+    .img-text-section p {
+        font-size: 1.1rem;
+        padding: 8px 4px;
+        text-align: center;
+    }
+    .image-overlay {
+        font-size: 1.8rem !important;
+        padding: 8px 4px !important;
+        text-align: center;
+    }
+    .image-container {
+        min-height: 180px;
+        height: 220px;
+        margin-bottom: 10px;
+    }
+    .row.align-items-center {
+        flex-direction: column !important;
+    }
+    .footer-sec {
+        text-align: center !important;
+        padding-top: 8px;
+    }
+    .custom-footer .row {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .custom-footer p {
+        text-align: center;
+        font-size: 1rem;
+    }
+    .hero-section {
+        height: 300px;
+        min-height: 180px;
+    }
 }
 
 .carousel-container {
@@ -228,11 +293,30 @@ body {
 .image-container {
     height: 100%;
     display: flex;
+    position: relative;
 }
 .image-container img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+.image-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-family: Georgia;
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    z-index: 2;
+    padding: 20px;
+    /* background-color: rgba(0, 0, 0, 0.1); */
+    border-radius: 5px;
+    letter-spacing: 2px;
 }
 
 .alt-header-left{
@@ -247,7 +331,7 @@ body {
 }
 
 .img-text-section {
-    font-size: 350px;
+    font-size: 35px;
     font-weight: 10;
     font-family: 'Newsreader', serif;
     padding: 60px;
@@ -290,4 +374,66 @@ body {
     padding: 20px;
     text-align: left;
     position: relative; /* Ensures the background stays fixed within the div */
+}
+
+/* Disclaimer Overlay Styles */
+.disclaimer-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(242, 237, 228, 0.95); /* Matching bg-custom with slight transparency */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    color: #6f482c; /* Matching the brown text color used in the site */
+    font-family: 'Manrope', sans-serif;
+}
+
+.disclaimer-content {
+    background-color: #fff;
+    padding: 3rem;
+    border-radius: 10px;
+    max-width: 800px;
+    width: 90%;
+    max-height: 80vh;
+    overflow-y: auto;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 1px solid #6f482c;
+}
+
+.disclaimer-text {
+    margin-bottom: 2rem;
+    line-height: 1.6;
+    font-size: 1.1rem;
+    color: #1e1e1e;
+}
+
+.disclaimer-text p {
+    margin-bottom: 1rem;
+}
+
+.accept-button {
+    background-color: #6f482c;
+    color: #fff;
+    border: none;
+    padding: 12px 40px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.accept-button:hover {
+    background-color: #c19167;
+    transform: scale(1.05);
+}
+
+.hidden {
+    display: none !important;
 }

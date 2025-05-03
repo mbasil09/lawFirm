@@ -11,34 +11,14 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
 </head>
 <body>
-    <header class="bg-custom p-4">
-        <nav class="navbar navbar-expand-lg navbar-light">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#">
-                    <img src="nav-logo.png" alt="Logo" class="logo-img">
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                    <ul class="navbar-nav">
-                        <li class="nav-item"><a class="nav-link" href="#">HOME</a></li>
-                        <li class="nav-item"><a class="nav-link" href="./our-dna.html">OUR DNA</a></li>
-                        <li class="nav-item"><a class="nav-link" href="./work.html">WORK</a></li>
-                        <li class="nav-item"><a class="nav-link" href="mailto:email@example.com">CONTACT US</a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
-    
+    <div id="header-include"></div>
+    <div id="disclaimer-include"></div>
     <section class="banner-section"></section>
     
-    <section class="hero-section">
-        <h1 class="hero-text">We are a powerhouse corporate law firm<br>that advises investors<br>and companies—from seed to<br>buyout—across all sectors</h1>
+    <section class="hero-section" style="background: url('hero-image.webp') no-repeat center center/cover;">
+        <h1 class="hero-text">  Where Others See Complexity, We See a Path to Resolution – Crafted Over Decades.</h1>
     </section>
     
     <section class="container content-section">
@@ -46,10 +26,9 @@
             <span>Our Practices</span>
         </div>
         <div class="right-column">
-            <div class="text-section">Fund Raise Transactions</div>
-            <div class="text-section">Mergers and Acquisitions</div>
-            <div class="text-section">General Corporate</div>
-            <div class="text-section">Social Imapct</div>
+            <div class="text-section">Arbitration</div>
+            <div class="text-section">Litigation</div>
+            <div class="text-section">White Collar/investigations</div>
         </div>
     </section>
 
@@ -81,30 +60,31 @@
     <section class="container-fluid p-0">
         <div class="row align-items-center">
             <div class="col-md-6 d-flex justify-content-center p-0">
-                <ul class="list-unstyled hover-text-list w-100">
-                    <li class="hover-box" data-text="Competition/Antitrust,
-                    Corporate Governance,
-                    Employment,
-                    ESG,
-                    Intellectual Property,
-                    Investment Funds,
-                    Mergers & Acquisitions,
-                    Private Client,
-                    Private Equity,
-                    Real Estate,
-                    Taxation">1. Corporate</li>
-
-                    <li class="hover-box" data-text="Banking and Finance,
-                    Infrastructure & Project Finance,
-                    Insolvency & Bankruptcy">2. Finance</li>
+                <ul class="list-unstyled hover-text-list w-100"> 
 
                     <li class="hover-box" data-text="Arbitration,
                     Litigation,
-                    White Collar/Investigations">3. Dispute Resolution</li>
+                    White Collar/Investigations">1. Dispute Resolution</li>
+
+                    <li class="hover-box" data-text="Banking & Finance Law Practice,
+                    Infrastructure, Energy & Project Finance,
+                    Insolvency & BankruptcyRestructuring, Insolvency & Bankruptcy">2. Finance</li>
 
                     <li class="hover-box" data-text="Capital Markets,
                     Debt Markets,
-                    Financial Regulatory">4. Markets</li>
+                    Financial Regulatory">3. Markets</li>
+
+                    <li class="hover-box" data-text="Anti trust & Competition Law Practice,
+                    Asset Management & Funds,
+                    Environmental, Social & Governance (ESG),
+                    Intellectual Property,
+                    Labour & Employment Practice,
+                    Mergers & Acquisitions,
+                    Private Client Law Practice,
+                    Private Equity,
+                    Real Estate Law Practice,
+                    Taxation">4. Corporate</li>
+
                 </ul>
             </div>
             <div class="col-md-6 d-flex align-items-center">
@@ -113,54 +93,26 @@
         </div>
     </section>
 
-    <footer class="custom-footer text-white text-center py-3">
-        <div class="container">
-            <div class="row">
-                <div class="col-12 col-md-6 text-start footer-sec">
-                    <h5>EXPLORE</h5>
-                    <ul class="list-unstyled">
-                        <li><a href="#" class="text-white">OUR DNA</a></li>
-                        <li><a href="#" class="text-white">Work</a></li>
-                    </ul>
-                </div>
-                <div class="col-12 col-md-6 text-start align-self-start footer-sec">
-                    <h5>Connect</h5>
-                    <div class="d-flex gap-3">
-                        <a href="#" class="text-white"><i class="bi bi-linkedin"></i></a>
-                        <a href="mailto:email@example.com" class="text-white"><i class="bi bi-envelope"></i></a>
-                        <a href="tel:+123456789" class="text-white"><i class="bi bi-telephone"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="row mt-3 d-flex justify-content-center w-100">
-                <div class="col-12 text-center">
-                    <p>123 Business Street, City, Country</p>
-                </div>
-            </div>
-        </div>
-    </footer>
+    <div id="footer-include"></div>
+    <script src="script.js"></script>
     <script>
-        document.querySelectorAll('.hover-text-list li').forEach(item => {
-            item.addEventListener('mouseover', function() {
-                const hoverTextContainer = document.getElementById('hover-text');
-                const listItem = document.createElement('ul');
-
-                // Split data-text into separate list items
-                const items = this.getAttribute('data-text').split(',');
-                items.forEach(text => {
-                    const listElement = document.createElement('li');
-                    listElement.textContent = text;
-                    listItem.appendChild(listElement);
-                });
-
-                // Clear previous content and append the new list
-                hoverTextContainer.innerHTML = '';
-                hoverTextContainer.appendChild(listItem);
-            });
-            item.addEventListener('mouseleave', function() {
-                    document.getElementById('hover-text').innerHTML = '';
-                });
+    function loadInclude(id, file, callback) {
+        fetch(file).then(r => r.text()).then(html => {
+            document.getElementById(id).innerHTML = html;
+            if (callback) callback();
         });
+    }
+    loadInclude('header-include', 'header.html');
+    loadInclude('footer-include', 'footer.html');
+    loadInclude('disclaimer-include', 'disclaimer.html', checkDisclaimer);
+
+    function checkDisclaimer() {
+        const disclaimerAccepted = localStorage.getItem('disclaimerAccepted');
+        if (disclaimerAccepted === 'true') {
+            const overlay = document.getElementById('disclaimerOverlay');
+            if (overlay) overlay.classList.add('hidden');
+        }
+    }
     </script>
 </body>
 </html>
