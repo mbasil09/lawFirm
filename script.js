@@ -13,10 +13,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Hover text logic for practice areas (if present)
     const hoverItems = document.querySelectorAll('.hover-text-list li');
+    const hoverTextContainer = document.getElementById('hover-text');
+    function setDefaultHoverText() {
+        hoverTextContainer.innerHTML = '<span>Our Practice</span>';
+    }
     if (hoverItems.length) {
+        setDefaultHoverText();
         hoverItems.forEach(item => {
             item.addEventListener('mouseover', function() {
-                const hoverTextContainer = document.getElementById('hover-text');
                 const listItem = document.createElement('ul');
                 const items = this.getAttribute('data-text').split(',');
                 items.forEach(text => {
@@ -28,7 +32,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 hoverTextContainer.appendChild(listItem);
             });
             item.addEventListener('mouseleave', function() {
-                document.getElementById('hover-text').innerHTML = '';
+                setDefaultHoverText();
             });
         });
     }
