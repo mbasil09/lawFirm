@@ -50,7 +50,6 @@ h1, h2, h3, h4, h5, h6, .hero-text, .values-title, .worklife-title, .dna-section
 }
 
 .value-number, .worklife-number, .worklife-card-number {
-    background: var(--accent);
     color: #fff;
     font-size: 1.3rem;
     font-family: 'Inter', 'Manrope', sans-serif;
@@ -663,14 +662,20 @@ body {
 }
 
 @media (max-width: 768px) {
-  .approach-divider {
-    width: 100vw;
-    margin-left: 0.5rem;
-    margin-right: -50vw;
-  }
   .approach-row {
-    padding-left: 1rem;
-    padding-right: 1rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    flex-wrap: nowrap !important;
+  }
+  .alt-header-left p {
+    white-space: nowrap !important;
+  }
+  .approach-divider {
+    width: 100%;
+    min-width: 24px;
+    margin-left: 0.5rem;
+    margin-right: 0;
+    flex-shrink: 1;
   }
 }
 
@@ -1196,6 +1201,11 @@ body {
         bottom: 10px;
     }
 }
+@media (max-width: 768px) {
+  .leadership-card:not(:first-child) {
+    margin-top: 1.2rem !important;
+  }
+}
 
 /* Join Us Section Styles */
 .joinus-section {
@@ -1327,4 +1337,146 @@ body {
         padding-left: 0.5rem;
         padding-right: 0.5rem;
     }
+}
+
+/* --- Our Practice Section Responsive Styles --- */
+.practice-btn {
+  width: 100%;
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  padding: 1rem;
+  font-size: 1.1rem;
+  font-family: 'Inter', 'Manrope', sans-serif;
+  font-weight: 600;
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+  text-align: left;
+  transition: background 0.2s;
+}
+.practice-btn:active, .practice-btn:focus {
+  background: #a48d4a;
+  outline: none;
+}
+.practice-details {
+  background: #fffbe8;
+  color: var(--body-text);
+  border-left: 4px solid var(--accent);
+  border-radius: 0 0 8px 8px;
+  margin-bottom: 1rem;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  display: none;
+  transition: max-height 0.3s ease;
+}
+.practice-details.show {
+  display: block;
+}
+@media (max-width: 768px) {
+  #hover-text, .placeholder-img, .col-md-6.d-none.d-md-flex {
+    display: none !important;
+  }
+  #practice-list {
+    padding: 0 0.5rem;
+  }
+  .practice-btn {
+    font-size: 1rem;
+    padding: 0.85rem;
+  }
+  .practice-details {
+    font-size: 0.97rem;
+    padding: 0.7rem 0.9rem;
+  }
+}
+
+/* --- Our Practice Section: Mobile Only (Simple) --- */
+.practice-mobile-section {
+  background: #fffbe8;
+  border-left: 4px solid var(--accent);
+  border-radius: 8px;
+  padding: 1.2rem 1rem 1rem 1.2rem;
+  margin-bottom: 1.5rem;
+}
+.practice-mobile-header {
+  font-size: 1.15rem;
+  color: var(--primary-header);
+  font-family: 'Inter', 'Manrope', sans-serif;
+  font-weight: 700;
+  margin-bottom: 0.7rem;
+}
+.practice-mobile-list {
+  padding-left: 1.2rem;
+  margin-bottom: 0;
+}
+.practice-mobile-list li {
+  font-size: 1rem;
+  color: var(--body-text);
+  font-family: 'Merriweather', 'Newsreader', serif;
+  margin-bottom: 0.3rem;
+  list-style-type: disc;
+}
+@media (max-width: 768px) {
+  .practice-mobile-section {
+    padding: 0.9rem 0.6rem 0.7rem 1rem;
+    margin-bottom: 1.1rem;
+  }
+  .practice-mobile-header {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+  .practice-mobile-list li {
+    font-size: 0.97rem;
+    margin-bottom: 0.2rem;
+  }
+}
+
+/* --- Our Approach Section: Mobile Only --- */
+@media (max-width: 768px) {
+  .approach-mobile-title {
+    font-size: 2.8rem;
+    font-family: 'Inter', 'Manrope', sans-serif;
+    font-weight: 800;
+    color: var(--primary-header);
+    letter-spacing: 1px;
+  }
+  .approach-mobile-card {
+    background: #fffbe8;
+    border-left: 4px solid var(--accent);
+    border-radius: 10px;
+    padding: 1.1rem 1rem 1rem 1.2rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    box-shadow: 0 2px 8px rgba(191,167,106,0.07);
+  }
+  .approach-mobile-number {
+    font-size: 1.3rem;
+    font-family: 'Inter', 'Manrope', sans-serif;
+    font-weight: 700;
+    color: #fff;
+    background: var(--accent);
+    border-radius: 50%;
+    width: 2.2rem;
+    height: 2.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0.2rem;
+    flex-shrink: 0;
+    box-shadow: 0 2px 8px rgba(191,167,106,0.13);
+  }
+  .approach-mobile-heading {
+    font-size: 1.08rem;
+    font-family: 'Inter', 'Manrope', sans-serif;
+    font-weight: 700;
+    color: var(--primary-header);
+    margin-bottom: 0.2rem;
+    margin-top: 0.1rem;
+  }
+  .approach-mobile-desc {
+    font-size: 0.97rem;
+    color: var(--body-text);
+    font-family: 'Merriweather', 'Newsreader', serif;
+    margin-bottom: 0;
+  }
 }

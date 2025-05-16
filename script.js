@@ -36,4 +36,18 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
     }
+
+    // Tap-to-expand for mobile-only Our Practice section
+    const mobileBtns = document.querySelectorAll('.practice-btn-mobile');
+    mobileBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+            const details = this.nextElementSibling;
+            // Close all others
+            document.querySelectorAll('.practice-details-mobile').forEach(d => {
+                if (d !== details) d.classList.remove('show');
+            });
+            // Toggle this one
+            details.classList.toggle('show');
+        });
+    });
 }); 
