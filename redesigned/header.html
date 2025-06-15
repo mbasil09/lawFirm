@@ -36,7 +36,39 @@
 </header>
 
 <style>
-/* Additional header styles */
+/* CSS Variables */
+:root {
+    --primary-navy: #1a237e;
+    --primary-navy-light: #3949ab;
+    --primary-navy-dark: #0d47a1;
+    --accent-gold: #ff8f00;
+    --accent-gold-light: #ffb300;
+    --text-light: #ffffff;
+    --text-primary: #212121;
+    --text-secondary: #757575;
+    --shadow-light: 0 2px 10px rgba(0,0,0,0.1);
+    --shadow-medium: 0 4px 20px rgba(0,0,0,0.15);
+}
+
+/* Header Styles */
+.header {
+    background: linear-gradient(135deg, var(--primary-navy) 0%, var(--primary-navy-light) 100%);
+    box-shadow: var(--shadow-medium);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: all 0.3s ease;
+    padding: 1rem 0;
+}
+
+.header.scrolled {
+    padding: 0.5rem 0;
+    background: rgba(26, 35, 126, 0.95);
+    backdrop-filter: blur(10px);
+}
+
+/* Container and Navbar */
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -57,6 +89,11 @@
 .navbar-brand img {
     height: 50px;
     width: auto;
+    transition: transform 0.3s ease;
+}
+
+.navbar-brand:hover img {
+    transform: scale(1.05);
 }
 
 .navbar-toggler {
@@ -134,6 +171,21 @@
     letter-spacing: 0.5px;
     text-transform: uppercase;
     font-size: 0.9rem;
+    color: var(--text-light, #ffffff);
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    display: block;
+}
+
+/* Desktop hover styles - removed problematic shimmer effect */
+.nav-link:hover {
+    background-color: var(--accent-gold, #ff8f00);
+    color: var(--text-light, #ffffff);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255, 143, 0, 0.3);
+    text-decoration: none;
 }
 
 /* Mobile Styles */
@@ -199,4 +251,68 @@
         padding: 0.5rem;
     }
 }
-</style> 
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const navbarToggler = document.querySelector('.navbar-toggler');
+    const navbarCollapse = document.querySelector('.navbar-collapse');
+    const header = document.querySelector('.header');
+    
+    // Mobile menu functionality
+    if (navbarToggler && navbarCollapse) {
+        navbarToggler.addEventListener('click', function() {
+            // Toggle active class on toggler for animation
+            navbarToggler.classList.toggle('active');
+            
+            // Toggle show class on navbar collapse
+            navbarCollapse.classList.toggle('show');
+            
+            // Prevent body scroll when menu is open
+            document.body.style.overflow = navbarCollapse.classList.contains('show') ? 'hidden' : '';
+        });
+        
+        // Close menu when clicking on nav links
+        const navLinks = navbarCollapse.querySelectorAll('.nav-link');
+        navLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                navbarToggler.classList.remove('active');
+                navbarCollapse.classList.remove('show');
+                document.body.style.overflow = '';
+            });
+        });
+        
+        // Close menu when clicking outside
+        document.addEventListener('click', function(e) {
+            if (!navbarToggler.contains(e.target) && !navbarCollapse.contains(e.target)) {
+                navbarToggler.classList.remove('active');
+                navbarCollapse.classList.remove('show');
+                document.body.style.overflow = '';
+            }
+        });
+    }
+    
+    // Header scroll effect
+    if (header) {
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+    }
+    
+    // Add body padding to prevent content from being hidden under fixed header
+    if (header) {
+        const headerHeight = header.offsetHeight;
+        document.body.style.paddingTop = headerHeight + 'px';
+        
+        // Adjust on window resize
+        window.addEventListener('resize', function() {
+            const newHeaderHeight = header.offsetHeight;
+            document.body.style.paddingTop = newHeaderHeight + 'px';
+        });
+    }
+});
+</script> 

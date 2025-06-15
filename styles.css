@@ -96,7 +96,7 @@ h1, h2, h3, h4, h5, h6, .hero-text, .values-title, .worklife-title, .dna-section
 
 .bg-custom {
     background-color: #F2EDE4;
-    min-height: 60px;
+    min-height: 90px;
     height: auto;
     position: fixed;
     top: 0;
@@ -131,7 +131,8 @@ body {
 }
 
 .logo-img {
-    width: 200px; /* Adjust width as needed */
+    width: 70px;
+    height: 70px;
     object-fit: contain;
 }
 
@@ -182,7 +183,7 @@ body {
     width: 100%;
     height: 200px;
     background: #F2EDE4 url('logo.png') no-repeat center center/contain;
-    margin-top: 40px;
+    margin-top: 90px;
     margin-bottom: 30px;
 }
 
@@ -263,10 +264,7 @@ body {
         padding: 10px !important;
         min-height: 40px;
     }
-    .navbar-brand img.logo-img {
-        width: 120px;
-        max-height: 60px;
-    }
+
     .navbar-nav .nav-link {
         font-size: 1rem;
         margin-right: 0;
@@ -624,6 +622,7 @@ body {
     font-family: 'Newsreader', serif;
     font-weight: 400;
     line-height: 1.6;
+    text-align: justify;
 }
 .legacy-quote {
     font-size: 1.8rem;
@@ -732,6 +731,7 @@ body {
     font-weight: 400;
     line-height: 1.7;
     margin-bottom: 1.5rem;
+    text-align: justify;
 }
 
 /* Our Values Section Styles */
@@ -1479,4 +1479,119 @@ body {
     font-family: 'Merriweather', 'Newsreader', serif;
     margin-bottom: 0;
   }
+}
+
+.navbar {
+    min-height: 0 !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+/* --- Sectors Section Styles --- */
+.sectors-section {
+    background: var(--background);
+    border-top: 2px solid var(--accent);
+    border-bottom: 2px solid var(--accent);
+    padding: 100px 0 100px 0;
+}
+.sectors-list-col {
+    background: #fffbe8;
+    border-radius: 12px 0 0 12px;
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+.sectors-list {
+    font-family: 'Merriweather', 'Newsreader', serif;
+    font-size: 1.25rem;
+    color: var(--body-text);
+    padding-left: 2.5rem;
+    margin-bottom: 0;
+}
+.sectors-list li {
+    margin-bottom: 0.7rem;
+    list-style-type: disc;
+}
+.sectors-title-col {
+    background: url('dna-bg.webp') center center/cover no-repeat #F2EDE4;
+    min-height: 820px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    border-radius: 0 12px 12px 0;
+    /* Ensure the image fills and crops to the area */
+    background-size: cover;
+    font-family: 'Newsreader', serif;
+    background-position: center;
+}
+.sectors-title-bg {
+    background: none;
+    border-radius: 0 12px 12px 0;
+    padding: 2rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.sectors-title {
+    font-size: 3rem;
+    font-family: 'Newsreader', serif;
+    font-weight: 800;
+    color: #fff;
+    letter-spacing: 2px;
+    text-align: center;
+    width: 100%;
+    display: block;
+}
+
+/* Mobile Sectors Section */
+.sectors-mobile-section {
+    background: #fffbe8;
+    border-left: 4px solid var(--accent);
+    border-radius: 8px;
+    padding: 1.2rem 1rem 1rem 1.2rem;
+    margin-bottom: 1.5rem;
+}
+.sectors-mobile-header {
+    font-size: 1.15rem;
+    color: var(--primary-header);
+    font-family: 'Inter', 'Manrope', sans-serif;
+    font-weight: 700;
+    margin-bottom: 0.7rem;
+}
+.sectors-mobile-list {
+    padding-left: 1.2rem;
+    margin-bottom: 0;
+}
+.sectors-mobile-list li {
+    font-size: 1rem;
+    color: var(--body-text);
+    font-family: 'Merriweather', 'Newsreader', serif;
+    margin-bottom: 0.3rem;
+    list-style-type: disc;
+}
+@media (max-width: 768px) {
+    .sectors-section {
+        display: none !important;
+    }
+    .sectors-mobile-section {
+        padding: 0.9rem 0.6rem 0.7rem 1rem;
+        margin-bottom: 1.1rem;
+    }
+    .sectors-mobile-header {
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+    }
+    .sectors-mobile-list li {
+        font-size: 0.97rem;
+        margin-bottom: 0.2rem;
+    }
+}
+@media (min-width: 769px) {
+    .sectors-mobile-section {
+        display: none !important;
+    }
 }
