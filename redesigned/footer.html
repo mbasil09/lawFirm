@@ -1,0 +1,244 @@
+<footer class="footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3 class="footer-title">Explore</h3>
+                <ul class="footer-links">
+                    <li><a href="./our-dna.html" class="footer-link">Our DNA</a></li>
+                    <li><a href="./work.html" class="footer-link">Work</a></li>
+                    <li><a href="./index.html" class="footer-link">Practice Areas</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3 class="footer-title">Connect</h3>
+                <ul class="footer-links">
+                    <li>
+                        <a href="mailto:mrsinghofficial@mrsinghsisodiaco.in" class="footer-link">
+                            <i class="icon-email"></i>
+                            mrsinghofficial@mrsinghsisodiaco.in
+                        </a>
+                    </li>
+                    <li>
+                        <a href="tel:+918800743620" class="footer-link">
+                            <i class="icon-phone"></i>
+                            +91 88007 43620
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3 class="footer-title">Our Offices</h3>
+                <div class="footer-office">
+                    <div class="office-item">
+                        <strong>Head Office:</strong><br>
+                        M-73 B, Malviya Nagar,<br>
+                        New Delhi 110017
+                    </div>
+                    <div class="office-item">
+                        <strong>Branch Office:</strong><br>
+                        41-E, Kilokari,<br>
+                        New Delhi 110014
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h3 class="footer-title">Excellence in Legal Practice</h3>
+                <p class="footer-description">
+                    Delivering justice with integrity, precision, and unwavering commitment to our clients across India since 1990.
+                </p>
+                <div class="footer-stats">
+                    <div class="footer-stat">
+                        <span class="stat-number" data-target="30">30</span>
+                        <span class="stat-label">+ Years</span>
+                    </div>
+                    <div class="footer-stat">
+                        <span class="stat-number" data-target="500">500</span>
+                        <span class="stat-label">+ Cases Won</span>
+                    </div>
+                    <div class="footer-stat">
+                        <span class="stat-number" data-target="100">100</span>
+                        <span class="stat-label">% Dedication</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="footer-copyright">
+                <p>&copy; 2025 M R Singh Sisodia & Co. LLP. All rights reserved.</p>
+            </div>
+            <div class="footer-legal">
+                <a href="#" class="footer-link">Privacy Policy</a>
+                <span class="divider">|</span>
+                <a href="#" class="footer-link">Terms of Service</a>
+                <span class="divider">|</span>
+                <a href="#" class="footer-link">Legal Disclaimer</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<style>
+/* Footer specific styles */
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 3rem;
+    margin-bottom: 3rem;
+}
+
+.footer-section h3 {
+    margin-bottom: 1.5rem;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    margin-bottom: 0.8rem;
+}
+
+.footer-office {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.office-item {
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.office-item strong {
+    color: var(--accent-gold);
+}
+
+.footer-description {
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+.footer-stats {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.footer-stat {
+    text-align: center;
+    min-width: 80px;
+}
+
+.footer-stat .stat-number {
+    display: block;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--accent-gold);
+    line-height: 1;
+}
+
+.footer-stat .stat-label {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.7);
+    text-transform: uppercaseelse;
+    letter-spacing: 0.5px;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-copyright p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.footer-legal {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.footer-legal .divider {
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.footer-legal .footer-link {
+    font-size: 0.9rem;
+}
+
+/* Icons */
+.icon-email::before,
+.icon-phone::before {
+    content: '';
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin-right: 0.5rem;
+    background-size: contain;
+    background-repeat: no-repeat;
+    vertical-align: middle;
+}
+
+.icon-email::before {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23ff8f00' viewBox='0 0 24 24'%3E%3Cpath d='M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z'/%3E%3C/svg%3E");
+}
+
+.icon-phone::before {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23ff8f00' viewBox='0 0 24 24'%3E%3Cpath d='M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z'/%3E%3C/svg%3E");
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+    
+    .footer-legal {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .footer-stats {
+        justify-content: center;
+    }
+    
+    .office-item {
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-stats {
+        gap: 1rem;
+    }
+    
+    .footer-stat {
+        min-width: 60px;
+    }
+    
+    .footer-stat .stat-number {
+        font-size: 1.5rem;
+    }
+}
+</style> 

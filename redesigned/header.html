@@ -1,0 +1,202 @@
+<header class="header">
+    <div class="container">
+        <nav class="navbar">
+            <div class="navbar-brand">
+                <a href="./index.html">
+                    <img src="../nav-logo2.png" alt="M R Singh Sisodia Law Offices" class="logo">
+                </a>
+            </div>
+            
+            <button class="navbar-toggler" type="button" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </span>
+            </button>
+            
+            <div class="navbar-collapse">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="./index.html">HOME</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./our-dna.html">OUR ETHOS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./work.html">WORK</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="mailto:mrsinghofficial@mrsinghsisodiaco.in">CONTACT US</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+</header>
+
+<style>
+/* Additional header styles */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.navbar-brand {
+    z-index: 1001;
+}
+
+.navbar-brand img {
+    height: 50px;
+    width: auto;
+}
+
+.navbar-toggler {
+    display: none;
+    background: none;
+    border: none;
+    padding: 0.75rem;
+    cursor: pointer;
+    z-index: 1001;
+    position: relative;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.navbar-toggler:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.navbar-toggler:focus {
+    outline: 2px solid var(--accent-gold);
+    outline-offset: 2px;
+}
+
+.navbar-toggler-icon {
+    display: flex;
+    flex-direction: column;
+    width: 24px;
+    height: 18px;
+    justify-content: space-between;
+    transition: transform 0.3s ease;
+}
+
+.navbar-toggler-icon span {
+    display: block;
+    height: 2px;
+    width: 100%;
+    background-color: var(--text-light);
+    transition: all 0.3s ease;
+    transform-origin: center;
+    border-radius: 1px;
+}
+
+.navbar-toggler.active .navbar-toggler-icon {
+    transform: rotate(180deg);
+}
+
+.navbar-toggler.active .navbar-toggler-icon span:nth-child(1) {
+    transform: rotate(45deg) translate(6px, 6px);
+}
+
+.navbar-toggler.active .navbar-toggler-icon span:nth-child(2) {
+    opacity: 0;
+    transform: scaleX(0);
+}
+
+.navbar-toggler.active .navbar-toggler-icon span:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+}
+
+.navbar-nav {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+
+.nav-item {
+    margin: 0 0.5rem;
+}
+
+.nav-link {
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .navbar-toggler {
+        display: block;
+    }
+    
+    .navbar-collapse {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: linear-gradient(135deg, var(--primary-navy) 0%, var(--primary-navy-dark) 100%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
+        z-index: 1000;
+        padding: 2rem;
+    }
+    
+    .navbar-collapse.show {
+        transform: translateX(0);
+    }
+    
+    .navbar-nav {
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+    }
+    
+    .nav-item {
+        margin: 1rem 0;
+        width: 100%;
+    }
+    
+    .nav-link {
+        font-size: 1.2rem;
+        padding: 1rem 2rem;
+        display: block;
+        border-radius: 25px;
+        transition: all 0.3s ease;
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+    
+    .nav-link:hover {
+        background-color: var(--accent-gold);
+        transform: scale(1.05);
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 1rem;
+    }
+    
+    .navbar-toggler {
+        padding: 0.5rem;
+    }
+}
+</style> 

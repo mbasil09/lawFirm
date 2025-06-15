@@ -1,0 +1,148 @@
+<div id="disclaimerOverlay" class="disclaimer-overlay">
+    <div class="disclaimer-content">
+        <div class="disclaimer-header">
+            <h3>Legal Disclaimer</h3>
+            <div class="disclaimer-icon">⚖️</div>
+        </div>
+        
+        <div class="disclaimer-text">
+            <p>
+                <strong>Disclaimer:</strong> By browsing this website, you acknowledge that you are voluntarily seeking general information about our firm, M.R. Singh Sisodia & Co. LLP. No part of this website should be construed as an advertisement or solicitation of our professional services.
+            </p>
+            <p>
+                M.R. Singh Sisodia & Co. LLP is not liable for any consequence of any action taken by the user relying on material/information provided under this website.
+            </p>
+            <p>
+                M.R. Singh Sisodia & Co. LLP uses cookies on its website to improve its usability. This helps us in providing a good user experience and to also help in improving our website.
+            </p>
+        </div>
+        
+        <div class="disclaimer-actions">
+            <button class="disclaimer-btn" onclick="acceptDisclaimer()">
+                I Accept & Continue
+            </button>
+            <p class="disclaimer-note">
+                By clicking "I Accept & Continue", you agree to the terms stated above.
+            </p>
+        </div>
+    </div>
+</div>
+
+<style>
+/* Disclaimer specific styles */
+.disclaimer-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.disclaimer-header h3 {
+    margin: 0;
+    color: var(--primary-navy);
+    font-size: 1.8rem;
+}
+
+.disclaimer-icon {
+    font-size: 2rem;
+    animation: balance 2s ease-in-out infinite;
+}
+
+@keyframes balance {
+    0%, 100% { transform: rotate(-3deg); }
+    50% { transform: rotate(3deg); }
+}
+
+.disclaimer-text {
+    text-align: left;
+    margin-bottom: 2rem;
+}
+
+.disclaimer-text p {
+    margin-bottom: 1.2rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+.disclaimer-text strong {
+    color: var(--primary-navy);
+}
+
+.disclaimer-actions {
+    text-align: center;
+}
+
+.disclaimer-note {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    margin-top: 1rem;
+    opacity: 0.8;
+}
+
+/* Enhanced animations */
+.disclaimer-overlay {
+    animation: fadeInOverlay 0.3s ease-out;
+}
+
+.disclaimer-content {
+    animation: slideInDown 0.5s ease-out;
+    transform-origin: center top;
+}
+
+@keyframes fadeInOverlay {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-50px) scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+    .disclaimer-content {
+        margin: 1rem;
+        padding: 2rem 1.5rem;
+    }
+    
+    .disclaimer-header h3 {
+        font-size: 1.5rem;
+    }
+    
+    .disclaimer-icon {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .disclaimer-content {
+        margin: 0.5rem;
+        padding: 1.5rem 1rem;
+    }
+    
+    .disclaimer-header {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .disclaimer-header h3 {
+        font-size: 1.3rem;
+    }
+    
+    .disclaimer-text p {
+        font-size: 0.9rem;
+    }
+    
+    .disclaimer-note {
+        font-size: 0.8rem;
+    }
+}
+</style> 
