@@ -7,6 +7,39 @@
     --card-bg: #fff;
 }
 
+/* Gradient Backgrounds */
+.hero-gradient-1 {
+    background: linear-gradient(135deg, #1a237e 0%, #3949ab 50%, #0d47a1 100%);
+}
+
+.hero-gradient-2 {
+    background: linear-gradient(45deg, #1a237e 0%, #ff8f00 100%);
+}
+
+.dna-gradient {
+    background: linear-gradient(135deg, #6f482c 0%, #c19167 50%, #F2EDE4 100%);
+}
+
+.content-gradient {
+    background: linear-gradient(135deg, #6f482c 0%, #c19167 30%, #ff8f00 100%);
+}
+
+.sectors-gradient {
+    background: linear-gradient(135deg, #3949ab 0%, #1a237e 50%, #6f482c 100%);
+}
+
+/* Image placeholder styles for gradient replacements */
+.image-placeholder {
+    width: 100%;
+    height: 100%;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    position: relative;
+}
+
 body {
     background-color: var(--background);
     color: var(--body-text);
@@ -206,7 +239,7 @@ body {
 }
 .left-column {
     flex: 2;
-    background: url('content-image.webp') no-repeat center center/cover;
+    background: linear-gradient(135deg, #6f482c 0%, #c19167 30%, #ff8f00 100%);
     background-size: cover;
     min-height: 800px;
     width: 100%;
@@ -319,6 +352,11 @@ body {
         min-height: 180px;
         height: 220px;
         margin-bottom: 10px;
+    }
+    
+    .image-placeholder {
+        min-height: 180px;
+        height: 220px;
     }
     .row.align-items-center {
         flex-direction: column !important;
@@ -529,7 +567,7 @@ body {
     height: 500px;
     font-weight: 500;
     width: 100%; /* Ensure it covers full width */
-    background: url('dna-bg.webp') center/cover no-repeat #F2EDE4;
+    background: linear-gradient(135deg, #6f482c 0%, #c19167 50%, #F2EDE4 100%);
     display: flex; /* Align content inside */
     align-items: center;
     justify-content: center;
@@ -1516,7 +1554,7 @@ body {
     list-style-type: disc;
 }
 .sectors-title-col {
-    background: url('dna-bg.webp') center center/cover no-repeat #F2EDE4;
+    background: linear-gradient(135deg, #3949ab 0%, #1a237e 50%, #6f482c 100%);
     min-height: 820px;
     height: 100%;
     display: flex;
