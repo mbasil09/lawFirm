@@ -1238,10 +1238,20 @@ body {
         padding: 0.5rem 1.2rem;
         bottom: 10px;
     }
+    .leadership-text-display {
+        font-size: 0.75rem !important;
+        padding: 15px !important;
+        line-height: 1.4 !important;
+    }
 }
 @media (max-width: 768px) {
   .leadership-card:not(:first-child) {
     margin-top: 1.2rem !important;
+  }
+  .leadership-text-display {
+    font-size: 0.85rem !important;
+    padding: 18px !important;
+    line-height: 1.5 !important;
   }
 }
 
